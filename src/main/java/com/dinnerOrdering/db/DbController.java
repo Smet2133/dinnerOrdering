@@ -419,6 +419,7 @@ public class DbController {
                     "                    SELECT o.user_id, o.set_id, o.soup, o.salad, o.hot, o.hosper, o.fixings, o.drink, o.bread, o.sum \n" +
                     "                    FROM orders o, users u \n" +
                     "                    WHERE u.autoupdate = 1 AND \n" +
+                    "                    (SELECT sum(sum) s FROM orders o4 WHERE u.user_id = o4.user_id) >= -1000  " +
                     "                    date = (SELECT max(date) from orders o2 WHERE o2.user_id = o.user_id AND o2.sum < 0) \n" +
                     "                    AND o.user_id = u.user_id\n" +
                     "                    AND NOT exists (select NULL from orders o3 WHERE o3.user_id = o.user_id AND "+ strDate + " AND o3.sum < 0)");
