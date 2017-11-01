@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:6,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" height="1011px" margin="false">
+   <vaadin-grid width-full height="99.72%" data-item-type="com.dinnerOrdering.entities.OrderEntity" selection-mode="multi" _id="grid" :center :expand="0.5">
+    <table>
+     <colgroup>
+      <col column-id="name" sortable>
+      <col column-id="date" sortable>
+      <col column-id="set" sortable>
+      <col column-id="soup" sortable>
+      <col column-id="salad" sortable>
+      <col column-id="hot" sortable>
+      <col column-id="hosper" sortable>
+      <col column-id="fixings" sortable>
+      <col column-id="bread" sortable>
+      <col column-id="drink" sortable>
+      <col column-id="sum" sortable>
+     </colgroup>
+     <thead>
+      <tr default>
+       <th plain-text column-ids="name">Name</th>
+       <th plain-text column-ids="date">Date</th>
+       <th plain-text column-ids="set">Set</th>
+       <th plain-text column-ids="soup">Soup</th>
+       <th plain-text column-ids="salad">Salad</th>
+       <th plain-text column-ids="hot">Hot</th>
+       <th plain-text column-ids="hosper">Hosper</th>
+       <th plain-text column-ids="fixings">Fixings</th>
+       <th plain-text column-ids="bread">Bread</th>
+       <th plain-text column-ids="drink">Drink</th>
+       <th plain-text column-ids="sum">Sum</th>
+      </tr>
+     </thead>
+     <tbody></tbody>
+    </table>
+   </vaadin-grid>
+   <vaadin-horizontal-layout width-full height="100.33%" :expand>
+    <vaadin-vertical-layout size-auto margin="false" :center>
+     <vaadin-vertical-layout size-auto :center>
+      <vaadin-label plain-text>
+        Работа с записями: 
+      </vaadin-label>
+      <vaadin-button plain-text _id="deleteSelectedRowsBtn">
+        Удалить выбранные 
+      </vaadin-button>
+      <vaadin-text-field caption="Количество раз:" value="0" _id="countToCopyText"></vaadin-text-field>
+      <vaadin-button plain-text _id="copyRowBtn">
+        Повторить выбранные 
+      </vaadin-button>
+     </vaadin-vertical-layout>
+     <vaadin-form-layout width-auto height-full>
+      <vaadin-combo-box caption="Имя:" empty-selection-allowed="false" height="37px" data-item-type="java.lang.String" _id="nameComb">
+       <option item="Option1">Option 1</option>
+       <option item="Option2">Option 2</option>
+       <option item="Option3">Option 3</option>
+      </vaadin-combo-box>
+      <vaadin-label caption="Баланс:" plain-text _id="balanceLabel"></vaadin-label>
+      <vaadin-text-field caption="Внести сумму:" _id="insertSumText"></vaadin-text-field>
+      <vaadin-button plain-text _id="insertButton">
+        Внести 
+      </vaadin-button>
+     </vaadin-form-layout>
+    </vaadin-vertical-layout>
+    <vaadin-vertical-layout size-auto margin="false" :center>
+     <vaadin-form-layout width="306px" height-full>
+      <vaadin-date-field caption="Дата:" _id="dateField"></vaadin-date-field>
+      <vaadin-label caption="Сумма за день:" plain-text _id="sumForDayLabel"></vaadin-label>
+      <vaadin-button plain-text _id="getTableButton">
+        Вывести таблицу 
+      </vaadin-button>
+     </vaadin-form-layout>
+     <vaadin-grid caption="Рассылка таблиц" width="320px" height="162px" data-item-type="com.dinnerOrdering.entities.EmailEntity" _id="emailGrid">
+      <table>
+       <colgroup>
+        <col column-id="email" sortable>
+       </colgroup>
+       <thead>
+        <tr default>
+         <th plain-text column-ids="email">Email</th>
+        </tr>
+       </thead>
+       <tbody></tbody>
+      </table>
+     </vaadin-grid>
+     <vaadin-button plain-text _id="delEmailBtn">
+       Удалить 
+     </vaadin-button>
+     <vaadin-horizontal-layout>
+      <vaadin-text-field width="228px" _id="addEmailTxt"></vaadin-text-field>
+      <vaadin-button plain-text _id="addEmailBtn">
+        Добавить 
+      </vaadin-button>
+     </vaadin-horizontal-layout>
+     <vaadin-check-box caption="Включить автоотправку" _id="enableAutoSendingChb"></vaadin-check-box>
+     <vaadin-button plain-text _id="makeAutoOrdersAndSendMailButton">
+       Сформировать и отправить по почте 
+     </vaadin-button>
+    </vaadin-vertical-layout>
+   </vaadin-horizontal-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

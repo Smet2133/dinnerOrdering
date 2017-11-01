@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-grid-layout margin-bottom>
+   <row>
+    <column>
+     <vaadin-label height-full plain-text _id="headerLabel" :middle :center>
+       Greetings 
+     </vaadin-label>
+    </column>
+   </row>
+   <row>
+    <column>
+     <vaadin-form-layout width-auto height="579px" margin-left margin-right margin-top="false" :middle :center>
+      <vaadin-combo-box caption="Набор" empty-selection-allowed="false" width="351px" data-item-type="java.lang.String" _id="setComb">
+       <option item="Option1">Option 1</option>
+       <option item="Option2">Option 2</option>
+       <option item="Option3">Option 3</option>
+      </vaadin-combo-box>
+      <vaadin-button plain-text _id="showSoupsBtn">
+        Посмотреть супы дня 
+      </vaadin-button>
+      <vaadin-combo-box caption="Салат" enabled="false" width="351px" data-item-type="java.lang.String" _id="saladComb">
+       <option item="Option1">Option 1</option>
+       <option item="Option2">Option 2</option>
+       <option item="Option3">Option 3</option>
+      </vaadin-combo-box>
+      <vaadin-combo-box caption="Горячее" enabled="false" width="351px" height="37px" data-item-type="java.lang.String" _id="hotComb">
+       <option item="Option1">Option 1</option>
+       <option item="Option2">Option 2</option>
+       <option item="Option3">Option 3</option>
+      </vaadin-combo-box>
+      <vaadin-combo-box caption="Хоспер" enabled="false" width="351px" data-item-type="java.lang.String" _id="hosperComb">
+       <option item="Option1">Option 1</option>
+       <option item="Option2">Option 2</option>
+       <option item="Option3">Option 3</option>
+      </vaadin-combo-box>
+      <vaadin-combo-box caption="Гарнир" enabled="false" width="351px" data-item-type="java.lang.String" _id="fixingsComb">
+       <option item="Option1">Option 1</option>
+       <option item="Option2">Option 2</option>
+       <option item="Option3">Option 3</option>
+      </vaadin-combo-box>
+      <vaadin-combo-box caption="Напиток" enabled="false" width="351px" data-item-type="java.lang.String" _id="drinkComb">
+       <option item="Option1">Option 1</option>
+       <option item="Option2">Option 2</option>
+       <option item="Option3">Option 3</option>
+      </vaadin-combo-box>
+      <vaadin-combo-box caption="Хлеб" enabled="false" width="351px" data-item-type="java.lang.String" _id="breadComb">
+       <option item="Option1">Option 1</option>
+       <option item="Option2">Option 2</option>
+       <option item="Option3">Option 3</option>
+      </vaadin-combo-box>
+      <vaadin-label caption="Итог:" plain-text _id="priceLabel">
+        0 
+      </vaadin-label>
+      <vaadin-label caption="Баланс:" plain-text _id="balanceLabel">
+        0 
+      </vaadin-label>
+      <vaadin-vertical-layout width="351px" height-full margin="false">
+       <vaadin-button enabled="false" plain-text _id="confirmButton" :center>
+         Подтвердить 
+       </vaadin-button>
+       <vaadin-label height-full plain-text _id="messageLabel" :middle :center :expand></vaadin-label>
+      </vaadin-vertical-layout>
+     </vaadin-form-layout>
+    </column>
+    <column>
+     <vaadin-vertical-layout visible="false" width="419px" _id="currOrdLayout">
+      <vaadin-label width="115px" height-full plain-text _id="currOrderLbl" :expand>
+        Текущий заказ: 
+      </vaadin-label>
+      <vaadin-form-layout width="99.71%" :expand="0.5">
+       <vaadin-label caption="Набор:" width-full plain-text _id="setLbl">
+         - 
+       </vaadin-label>
+       <vaadin-label caption="Суп:" width-full plain-text _id="soupLbl">
+         - 
+       </vaadin-label>
+       <vaadin-label caption="Салат:" width-full plain-text _id="saladLbl">
+         - 
+       </vaadin-label>
+       <vaadin-label caption="Горячее:" width-full plain-text _id="hotLbl">
+         - 
+       </vaadin-label>
+       <vaadin-label caption="Хоспер:" width-full plain-text _id="hospLbl">
+         - 
+       </vaadin-label>
+       <vaadin-label caption="Гарнир:" width-full plain-text _id="fixingsLbl">
+         - 
+       </vaadin-label>
+       <vaadin-label caption="Напиток:" width-full plain-text _id="drinkLbl">
+         - 
+       </vaadin-label>
+       <vaadin-label caption="Хлеб:" width-full plain-text _id="breadLbl">
+         - 
+       </vaadin-label>
+      </vaadin-form-layout>
+      <vaadin-button plain-text _id="delCurrButton">
+        Удалить 
+      </vaadin-button>
+     </vaadin-vertical-layout>
+    </column>
+   </row>
+   <row>
+    <column>
+     <vaadin-check-box caption="Переносить последний сделанный заказ на следующий день" height="18px" _id="autoupdateChb" :center></vaadin-check-box>
+    </column>
+   </row>
+  </vaadin-grid-layout>
+ </body>
+</html>
